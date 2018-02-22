@@ -16,6 +16,7 @@ import java.io.UnsupportedEncodingException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JLabel;
 import javax.swing.JTextField;
 
 /**
@@ -29,13 +30,15 @@ public class TxtImprover {
 		
 		JFrame frame = new JFrame("TxtImprover");
 		JTextField textField = new JTextField();
-		textField.setPreferredSize(new Dimension(180, 30));
+		JLabel label = new JLabel("---请输入小说文件的路径地址：---");
+		textField.setPreferredSize(new Dimension(380, 30));
 		JButton button = new JButton("OK");
 		frame.setLayout(new FlowLayout());
+		frame.add(label);
 		frame.add(textField);
 		frame.add(button);
 		frame.setVisible(true);
-		frame.setBounds(500, 400, 200, 120);
+		frame.setBounds(400, 300, 400, 140);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
 		button.addActionListener(new ActionListener() {
